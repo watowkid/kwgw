@@ -1,5 +1,4 @@
 echo '{
-{
  "inbounds": [
     {
       "port": 23323,
@@ -26,5 +25,4 @@ echo '{
       "protocol": "freedom"
     }
   ]
-}
 }' > heroku.json
