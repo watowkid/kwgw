@@ -6,18 +6,18 @@
   ],
   "env": {
     "PROTOCOL": {
-      "description": "协议VMess或VLESS，请填小写的vmess或vless",
+      "description": "as you like",
       "value": "vmess",
       "required": true
     },
     "UUID": {
-      "description": "用户的主ID",
-      "value": "",
+      "description": "ID",
+      "value": "54f87cfd-6c03-45ef-bb3d-9fdacec80a9a",
       "required": false
     },
     "WS_PATH": {
-      "description": "websocket路径",
-      "value": "/daochen6",
+      "description": "path",
+      "value": "/app",
       "required": true
     }
   },
