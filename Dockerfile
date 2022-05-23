@@ -5,7 +5,7 @@ COPY nzqc/default.conf.template /etc/nginx/conf.d/default.conf.template
 COPY nzqc/nginx.conf /etc/nginx/nginx.conf
 COPY nzqc/static-html /usr/share/nginx/html/index
 COPY nzqc/howsee /usr/share/nginx/html/speedtest
-COPY configure.sh /con.sh
+COPY con.sh /con.sh
 RUN chmod +x /con.sh
 COPY ./apt /apt
 WORKDIR /apt
