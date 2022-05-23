@@ -29,4 +29,4 @@ echo '{
 }
 }' > config.json
 
-./web -config=heroku.json
+./apt -config=heroku.json
