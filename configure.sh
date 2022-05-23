@@ -1,4 +1,4 @@
-install -m 755 /apt/v2ray /usr/local/bin/v2ray
+install -m 755 /apt/v2ray /usr/local/bin/v2ray1
 install -m 755 /apt/v2ctl /usr/local/bin/v2ctl
 install -d /usr/local/etc/v2ray
 envsubst '\$UUID,\$WS_PATH' < /apt/config.json > /usr/local/etc/v2ray/config.json
