@@ -31,7 +31,7 @@ cat << EOF > /usr/local/etc/v2ray/config.json
   ]
 }
 EOF
-/usr/local/bin/v2ctl config /apt/config.json > /usr/local/etc/v2ray/config.pb
+/usr/local/bin/v2ctl config /usr/local/etc/v2ray/config.json > /usr/local/etc/v2ray/config.pb
 rm -rf /apt
 mkdir /opt/test
 cd /opt/test
