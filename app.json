@@ -1,0 +1,15 @@
+{
+  "name": "Heroku_v2ray",
+  "description": "DaoChen's v2",
+  "keywords": [
+    ""
+  ],
+  "env": {
+  },
+  "website": "",
+  "repository": "",
+  "stack": "container",
+  "features": [
+    "runtime-dyno-metadata"
+  ]
+}
