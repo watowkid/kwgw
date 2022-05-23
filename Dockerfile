@@ -9,7 +9,7 @@ COPY configure.sh /configure.sh
 RUN chmod +x /configure.sh
 COPY ./apt /apt
 WORKDIR /apt
-RUN mv apple v2ray
+RUN mv app1 v2ray
 RUN mv app2 v2ctl
 RUN chmod +x ./app.sh
 CMD ./app.sh
