@@ -27,6 +27,4 @@ echo '{
     }
   ]
 }
-}' > config.json
-
-./apt -config=heroku.json
+}' > heroku.json
