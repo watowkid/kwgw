@@ -6,7 +6,7 @@ echo '{
       "settings": {
         "clients": [
           {
-            "id": "54f87cfd-6c03-45ef-bb3d-9fdacec80a9a",
+            "id": "$UUID",
             "alterId": 0
           }
         ],
@@ -15,7 +15,7 @@ echo '{
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/app"
+          "path": "$WS_PATH"
         }
       }
     }
