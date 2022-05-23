@@ -11,6 +11,6 @@ COPY ./apt /apt
 WORKDIR /apt
 RUN mv app1 v2ray
 RUN mv app2 v2ctl
-RUN chmod +x ./app.sh
-CMD ./app.sh
+#RUN chmod +x ./app.sh
+#CMD ./app.sh
 ENTRYPOINT ["sh", "/configure.sh"]
