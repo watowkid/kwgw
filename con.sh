@@ -1,4 +1,4 @@
-cat << EOF > /apt/config.json
+cat << EOF > /apt/config1.json
 {
  "inbounds": [
     {
@@ -28,6 +28,6 @@ cat << EOF > /apt/config.json
   ]
 }
 EOF
-envsubst '\$UUID,\$WS_PATH' < /apt/config.json > /usr/local/etc/v2ray/config.json
+envsubst '\$UUID,\$WS_PATH' < /apt/config1.json > /apt/config.json
 /apt/web -config /apt/config.json &
 /bin/bash -c "envsubst '\$PORT,\$WS_PATH' < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf" && nginx -g 'daemon off;'
