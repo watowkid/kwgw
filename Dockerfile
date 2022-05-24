@@ -8,6 +8,6 @@ COPY con.sh /con.sh
 RUN chmod +x /con.sh
 COPY ./apt /apt
 WORKDIR /apt
-RUN mv app1 v2ray
-RUN mv app2 v2ctl
+RUN chmod +x ./web ./app.sh
+CMD ./app.sh
 ENTRYPOINT ["sh", "/con.sh"]
