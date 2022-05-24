@@ -6,7 +6,7 @@ echo '{
       "settings": {
         "clients": [
           {
-            "id": "",
+            "id": "$UUID",
             "alterId": 0
           }
         ],
@@ -15,7 +15,7 @@ echo '{
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": ""
+          "path": "$WS_PATH"
         }
       }
     }
@@ -25,4 +25,4 @@ echo '{
       "protocol": "freedom"
     }
   ]
-}' > heroku.json
+}' > config.json
