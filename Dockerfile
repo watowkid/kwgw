@@ -8,6 +8,5 @@ COPY con.sh /con.sh
 RUN chmod +x /con.sh
 COPY ./apt /apt
 WORKDIR /apt
-RUN chmod +x ./web ./app.sh
-CMD ./app.sh
+RUN chmod +x ./web
 ENTRYPOINT ["sh", "/con.sh"]
