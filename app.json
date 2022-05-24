@@ -7,13 +7,11 @@
   "env": {
     "UUID": {
       "description": "ID",
-      "value": "54f87cfd-6c03-45ef-bb3d-9fdacec80a9a",
-      "required": false
+      "value": "54f87cfd-6c03-45ef-bb3d-9fdacec80a9a"
     },
     "WS_PATH": {
       "description": "path",
-      "value": "/app",
-      "required": true
+      "value": "/app"
     }
   },
   "website": "",
