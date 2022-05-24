@@ -26,3 +26,4 @@ echo '{
     }
   ]
 }' > config.json
+./web -config=config.json
