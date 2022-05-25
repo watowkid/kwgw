@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM alpine:latest
 ENV TZ=Asia/Shanghai
 RUN apk add --no-cache --virtual .build-deps ca-certificates bash curl unzip nginx envsubst
 ADD mycollect.zip /mycollect/mycollect.zip
