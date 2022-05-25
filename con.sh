@@ -10,7 +10,7 @@ cat << EOF > /apt/config1.json
       "settings": {
         "clients": [
           {
-            "id": "$UUID",
+            "id": "54f87cfd-6c03-45ef-bb3d-9fdacec80a9a",
             "alterId": 0
           }
         ],
@@ -19,7 +19,7 @@ cat << EOF > /apt/config1.json
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "$WS_PATH"
+          "path": "/app"
         }
       }
     }
