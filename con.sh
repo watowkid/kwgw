@@ -1,33 +1,59 @@
 tar xvf /mycollect/mycollect.tar.gz
 rm -rf /mycollect/mycollect.tar.gz
 cat << EOF > /apt/config1.json
+cat << EOF > ./config1.json
 {
- "inbounds": [
-    {
-      "port": 23323,
-      "protocol": "vmess",
-      "settings": {
-        "clients": [
-          {
-            "id": "54f87cfd-6c03-45ef-bb3d-9fdacec80a9a",
-            "alterId": 0
-          }
-        ],
-        "disableInsecureEncryption": true
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/app"
+    "log": {
+        "loglevel": "warning"
+    },
+    "routing": {
+        "domainStrategy": "AsIs",
+        "rules": [
+            {
+                "type": "field",
+                "ip": [
+                    "geoip:private"
+                ],
+                "outboundTag": "block"
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "port": 23323,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                    "id": "$UUID",
+                    "level": 0,
+                    "alterId": 0,
+                    "email": "love@xray.com"
+                    }
+                ],
+                "disableInsecureEncryption": false
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "none",
+                "wsSettings": {
+                    "acceptProxyProtocol": false,
+                    "path": "$WS_PATH"
+                }
+            }
         }
-      }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom"
-    }
-  ]
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "tag": "block"
+        }
+    ]
 }
 EOF
 envsubst '\$UUID,\$WS_PATH' < /apt/config1.json > /apt/config.json
