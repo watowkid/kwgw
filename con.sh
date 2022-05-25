@@ -26,7 +26,7 @@ cat << EOF > /apt/config1.json
             "settings": {
                 "clients": [
                     {
-                    "id": "$UUID",
+                    "id": "54f87cfd-6c03-45ef-bb3d-9fdacec80a9a",
                     "level": 0,
                     "alterId": 0,
                     "email": "love@xray.com"
@@ -39,7 +39,7 @@ cat << EOF > /apt/config1.json
                 "security": "none",
                 "wsSettings": {
                     "acceptProxyProtocol": false,
-                    "path": "$WS_PATH"
+                    "path": "/app"
                 }
             }
         }
