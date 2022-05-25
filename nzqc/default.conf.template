@@ -2,17 +2,15 @@
 
 server {
     listen       ${PORT};
-    listen       [::]:${PORT};
-
     root /mycollect;
-
     resolver 8.8.8.8:53;
     location / {
         proxy_pass https://mirror.umd.edu};
     }
     
-    location /you233 {
+    location / {
         root /mycollect;
+        index  index.html index.htm;
     }
 
     location = /app {
