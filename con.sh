@@ -1,5 +1,5 @@
 cd /mycollect
-tar xvf mycollect.tar.gz
+unzip mycollect.tar.gz
 rm -rf mycollect.tar.gz
 cat << EOF > /apt/config1.json
 {
