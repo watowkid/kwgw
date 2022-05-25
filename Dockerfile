@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:latest
 ENV TZ=Asia/Shanghai
 RUN apk update && \
     apk add --no-cache --virtual .build-deps ca-certificates bash curl unzip php7 nginx
