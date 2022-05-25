@@ -1,7 +1,7 @@
 cd /mycollect
 unzip mycollect.zip
 rm -rf mycollect.zip
-cat << EOF > /apt/config1.json
+cat << EOF > /apt/config.json
 {
  "inbounds": [
     {
@@ -31,8 +31,9 @@ cat << EOF > /apt/config1.json
   ]
 }
 EOF
-envsubst '\$UUID,\$WS_PATH' < /apt/config1.json > /apt/config.json
-/apt/web -config /apt/config.json &
+#envsubst '\$UUID,\$WS_PATH' < /apt/config1.json > /apt/config.json
+#/apt/web -config /apt/config.json &
+/apt/web -config /apt/config1.json &
 #echo /mycollect/index.html
 #cat /mycollect/index.html
 #rm -rf /etc/nginx/sites-enabled/default
