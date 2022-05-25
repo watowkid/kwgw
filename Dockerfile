@@ -1,6 +1,7 @@
 FROM nginx:1.19.3-alpine
 ENV TZ=Asia/Shanghai
-RUN apk add --no-cache --virtual .build-deps ca-certificates bash curl unzip php7
+RUN apk update && \
+    apk add --no-cache --virtual .build-deps ca-certificates bash curl unzip php7
 ADD mycollect.tar.gz /mycollect/mycollect.tar.gz
 ADD nzqc/index.html /usr/share/nginx/html/index
 ADD nzqc/default.conf.template /etc/nginx/conf.d/default.conf.template
