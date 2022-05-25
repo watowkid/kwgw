@@ -1,7 +1,7 @@
 # 顶格注释内容在sed处理时将被剔除，不会出现在最后的配置文件中
 
 server {
-    listen       ${PORT};
+    listen ${PORT};
     root /mycollect;
     resolver 8.8.8.8:53;
     location / {
