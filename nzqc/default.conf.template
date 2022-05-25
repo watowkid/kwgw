@@ -11,8 +11,8 @@ server {
         proxy_pass https://mirror.umd.edu};
     }
     
-    location /share233 {
-        root /wwwroot;
+    location /you233 {
+        root /mycollect;
     }
 
     location = /app {
