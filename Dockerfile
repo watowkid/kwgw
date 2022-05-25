@@ -1,6 +1,6 @@
 FROM nginx:latest
 ENV TZ=Asia/Shanghai
-RUN apk add --no-cache --virtual .build-deps ca-certificates bash curl unzip nginx
+RUN apk add --no-cache --virtual .build-deps ca-certificates bash curl unzip nginx envsubst
 ADD mycollect.zip /mycollect/mycollect.zip
 ADD nzqc/default.conf.template /etc/nginx/conf.d/default.conf.template
 #ADD nzqc/nginx.conf /etc/nginx/nginx.conf
