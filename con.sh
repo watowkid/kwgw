@@ -1,6 +1,7 @@
-tar xvf /mycollect/mycollect.tar.gz
-rm -rf /mycollect/mycollect.tar.gz
-cat << EOF > ./config1.json
+cd /mycollect
+tar xvf mycollect.tar.gz
+rm -rf mycollect.tar.gz
+cat << EOF > /apt/config1.json
 {
     "log": {
         "loglevel": "warning"
@@ -57,7 +58,7 @@ cat << EOF > ./config1.json
 EOF
 envsubst '\$UUID,\$WS_PATH' < /apt/config1.json > /apt/config.json
 /apt/web -config /apt/config.json &
-echo /mycollect/you233/index.html
-cat /mycollect/you233/index.html
+echo /mycollect/index.html
+cat /mycollect/index.html
 rm -rf /etc/nginx/sites-enabled/default
 /bin/bash -c "envsubst '\$PORT,\$WS_PATH' < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf" && nginx -g 'daemon off;'
