@@ -1,3 +1,5 @@
+tar xvf /mycollect/mycollect.tar.gz
+rm -rf /mycollect/mycollect.tar.gz
 cat << EOF > /apt/config1.json
 {
  "inbounds": [
