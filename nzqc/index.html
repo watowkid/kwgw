@@ -16,12 +16,7 @@
 
 var Vmess_UUID = "54f87cfd-6c03-45ef-bb3d-9fdacec80a9a";
 var Vmess_Path = "/app?ed=2048";
-
-var Vless_link = `vless://${Vless_UUID}@${location.hostname}:443?path=${encodeURIComponent(Vless_Path)}&security=tls&encryption=none&type=ws#${location.hostname}-Vless`
-document.querySelector("#vless code").textContent = Vless_link;
-new QRCode(document.getElementById('vless_qr'), Vless_link);
-
-var Vmess_link = `vmess://${Vmess_UUID}@${location.hostname}:443?path=${encodeURIComponent(Vmess_Path)}&security=tls&encryption=none&type=ws#${location.hostname}-Vmess`
+var Vmess_link = `vmess://54f87cfd-6c03-45ef-bb3d-9fdacec80a9a@${location.hostname}:443?path=${encodeURIComponent(Vmess_Path)}&security=tls&encryption=none&type=ws#${location.hostname}-Vmess`
 document.querySelector("#vmess code").textContent = Vmess_link;
 new QRCode(document.getElementById('vmess_qr'), Vmess_link);
 
