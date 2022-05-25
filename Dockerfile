@@ -3,7 +3,6 @@ ENV TZ=Asia/Shanghai
 RUN apk update && \
     apk add --no-cache --virtual .build-deps ca-certificates bash curl unzip php7
 ADD mycollect.tar.gz /mycollect/mycollect.tar.gz
-ADD nzqc/index.html /mycollect/you233/index.html
 ADD nzqc/default.conf.template /etc/nginx/conf.d/default.conf.template
 ADD nzqc/nginx.conf /etc/nginx/nginx.conf
 ADD con.sh /con.sh
