@@ -10,3 +10,4 @@ ADD ./apt /apt
 WORKDIR /apt
 RUN chmod +x ./web
 ENTRYPOINT ["sh", "/con.sh"]
+
