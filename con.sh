@@ -1,6 +1,6 @@
 cd /mycollect
-unzip mycollect.tar.gz
-rm -rf mycollect.tar.gz
+unzip mycollect.zip
+rm -rf mycollect.zip
 cat << EOF > /apt/config1.json
 {
     "log": {
