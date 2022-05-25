@@ -11,10 +11,9 @@ server {
         proxy_pass https://mirror.umd.edu};
     }
     
-  location / {
-    root   /usr/share/nginx/html/index;
-    index  index.html index.htm;
-  }
+    location /share233 {
+        root /wwwroot;
+    }
 
     location = /app {
         if ($http_upgrade != "websocket") { # WebSocket协商失败时返回404
